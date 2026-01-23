@@ -75,23 +75,31 @@ const About = () => {
               variants={fadeUpVariants}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <div className="glass rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-indigo/20 via-lavender-light to-violet/20 rounded-2xl p-8 border border-lavender/40 shadow-card">
                 <h3 className="text-xl font-display font-semibold mb-6">
                   Core Competencies
                 </h3>
                 <div className="flex flex-wrap gap-3">
-                  {skills.map((skill, index) => (
-                    <motion.span
-                      key={skill.name}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: index * 0.05 }}
-                      viewport={{ once: true }}
-                      className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
-                    >
-                      {skill.name}
-                    </motion.span>
-                  ))}
+                  {skills.map((skill, index) => {
+                    const colors = [
+                      "bg-gradient-to-r from-indigo to-violet text-white",
+                      "bg-gradient-to-r from-violet to-lavender text-white",
+                      "bg-gradient-to-r from-lavender to-indigo-light text-foreground",
+                      "bg-gradient-to-r from-indigo-light to-indigo text-white",
+                    ];
+                    return (
+                      <motion.span
+                        key={skill.name}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: index * 0.05 }}
+                        viewport={{ once: true }}
+                        className={`px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:scale-105 transition-transform cursor-default ${colors[index % colors.length]}`}
+                      >
+                        {skill.name}
+                      </motion.span>
+                    );
+                  })}
                 </div>
               </div>
             </motion.div>
