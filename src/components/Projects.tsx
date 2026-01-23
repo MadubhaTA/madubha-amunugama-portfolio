@@ -35,7 +35,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 md:py-32">
+    <section id="projects" className="py-24 md:py-32 bg-gradient-to-br from-lavender/10 via-background to-violet/10">
       <div className="container mx-auto px-6">
         <motion.div
           variants={staggerContainer}

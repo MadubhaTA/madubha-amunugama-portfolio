@@ -18,7 +18,7 @@ const skills = [
 
 const About = () => {
   return (
-    <section id="about" className="py-24 md:py-32 relative">
+    <section id="about" className="py-24 md:py-32 relative bg-gradient-to-br from-violet/5 via-background to-lavender/10">
       <div className="container mx-auto px-6">
         <motion.div
           variants={staggerContainer}
