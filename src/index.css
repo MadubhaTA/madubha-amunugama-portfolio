@@ -134,6 +134,18 @@
   }
 
   .glass {
-    @apply backdrop-blur-xl bg-card border border-border/50 shadow-sm;
+    @apply backdrop-blur-xl bg-gradient-to-br from-white via-lavender-light/40 to-white border border-lavender/30 shadow-card;
+  }
+
+  .card-gradient-1 {
+    @apply bg-gradient-to-br from-indigo/10 via-lavender-light/50 to-violet/10;
+  }
+
+  .card-gradient-2 {
+    @apply bg-gradient-to-br from-violet/10 via-lavender-light/50 to-indigo/10;
+  }
+
+  .card-gradient-3 {
+    @apply bg-gradient-to-br from-lavender/20 via-white to-indigo/10;
   }
 }

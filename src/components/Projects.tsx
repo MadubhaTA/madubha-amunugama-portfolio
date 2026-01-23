@@ -73,9 +73,9 @@ const Projects = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group"
                 >
-                  <div className="h-full glass rounded-2xl p-8 hover:shadow-card transition-all duration-300 relative overflow-hidden">
+                  <div className={`h-full rounded-2xl p-8 hover:shadow-card transition-all duration-300 relative overflow-hidden border border-lavender/30 bg-gradient-to-br ${project.color}/10 via-white to-lavender-light/30`}>
                     {/* Gradient background on hover */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                     
                     {/* Icon */}
                     <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center mb-6 shadow-glow`}>
@@ -92,14 +92,21 @@ const Projects = () => {
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-6">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-xs font-medium"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                      {project.tags.map((tag, tagIndex) => {
+                        const tagColors = [
+                          "bg-indigo/20 text-indigo-dark",
+                          "bg-violet/20 text-violet",
+                          "bg-lavender/30 text-indigo",
+                        ];
+                        return (
+                          <span
+                            key={tag}
+                            className={`px-3 py-1 rounded-full text-xs font-medium ${tagColors[tagIndex % tagColors.length]}`}
+                          >
+                            {tag}
+                          </span>
+                        );
+                      })}
                     </div>
 
                     {/* Link */}

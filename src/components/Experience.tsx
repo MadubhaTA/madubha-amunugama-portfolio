@@ -81,7 +81,7 @@ const Experience = () => {
                 {/* Content */}
                 <div className={`ml-8 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
                   <motion.div
-                    className="glass rounded-2xl p-6 hover:shadow-card transition-shadow duration-300"
+                    className={`rounded-2xl p-6 hover:shadow-card transition-shadow duration-300 border border-lavender/30 ${index === 0 ? 'bg-gradient-to-br from-indigo/15 via-white to-violet/10' : index === 1 ? 'bg-gradient-to-br from-violet/10 via-white to-lavender/20' : 'bg-gradient-to-br from-lavender/20 via-white to-indigo/10'}`}
                     whileHover={{ y: -5 }}
                     transition={{ duration: 0.2 }}
                   >
