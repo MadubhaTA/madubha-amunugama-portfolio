@@ -5,7 +5,7 @@ import { ArrowDown, Mail, MapPin } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-hero">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-indigo/10 via-lavender-light to-violet/10">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

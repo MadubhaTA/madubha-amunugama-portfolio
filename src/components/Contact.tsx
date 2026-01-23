@@ -32,7 +32,7 @@ const contactInfo = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 md:py-32 bg-secondary/30">
+    <section id="contact" className="py-24 md:py-32 bg-gradient-to-br from-violet/15 via-lavender/10 to-indigo/15 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div
           variants={staggerContainer}
@@ -74,7 +74,7 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="glass rounded-xl p-6 flex items-center gap-4 hover:shadow-card transition-all duration-300 group"
+                  className="bg-white rounded-xl p-6 flex items-center gap-4 hover:shadow-card transition-all duration-300 group border border-lavender/20 shadow-sm"
                   whileHover={{ y: -5 }}
                 >
                   <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center shadow-glow">
@@ -105,7 +105,7 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-center"
           >
-            <div className="glass rounded-2xl p-8 md:p-12">
+            <div className="bg-white rounded-2xl p-8 md:p-12 border border-lavender/20 shadow-card">
               <h3 className="text-2xl font-display font-semibold mb-4">
                 Ready to start your next project?
               </h3>
