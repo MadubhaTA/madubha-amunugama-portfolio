@@ -9,7 +9,7 @@
     --background: 250 30% 98%;
     --foreground: 250 40% 10%;
 
-    --card: 250 40% 100%;
+    --card: 0 0% 100%;
     --card-foreground: 250 40% 10%;
 
     --popover: 250 40% 100%;
@@ -134,6 +134,6 @@
   }
 
   .glass {
-    @apply backdrop-blur-xl bg-card/70 border border-border/50;
+    @apply backdrop-blur-xl bg-card border border-border/50 shadow-sm;
   }
 }
