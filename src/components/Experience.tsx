@@ -11,6 +11,7 @@ const experiences = [
       "Leading UI/UX design and development for multiple enterprise level applications",
       "Conduct code reviews, guide refactoring initiatives, and mentor team members",
       "Designing interfaces for Leave Approval System and AI Chatbot Platform",
+      "Developed projects using Vuetify and Tailwind CSS for modern, responsive interfaces",
     ],
     gradient: "from-indigo via-violet to-lavender",
     bgGradient: "from-indigo/20 to-violet/10",

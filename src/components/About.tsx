@@ -82,10 +82,10 @@ const About = () => {
                 <div className="flex flex-wrap gap-3">
                   {skills.map((skill, index) => {
                     const colors = [
-                      "bg-gradient-to-r from-indigo to-violet text-white",
-                      "bg-gradient-to-r from-violet to-lavender text-white",
-                      "bg-gradient-to-r from-lavender to-indigo-light text-foreground",
-                      "bg-gradient-to-r from-indigo-light to-indigo text-white",
+                      "bg-indigo text-white",
+                      "bg-violet text-white",
+                      "bg-lavender text-foreground",
+                      "bg-primary text-white",
                     ];
                     return (
                       <motion.span
