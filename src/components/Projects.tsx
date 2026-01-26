@@ -35,7 +35,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 md:py-32 bg-gradient-to-br from-lavender/10 via-background to-violet/10">
+    <section id="projects" className="py-24 md:py-32 bg-primary">
       <div className="container mx-auto px-6">
         <motion.div
           variants={staggerContainer}
@@ -50,14 +50,14 @@ const Projects = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 rounded-full bg-white/20 text-primary-foreground text-sm font-medium mb-4">
               Projects
             </span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-primary-foreground">
               Featured
-              <span className="text-gradient"> Work</span>
+              <span className="text-white/80"> Work</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
               A selection of enterprise-level applications I've designed and developed
             </p>
           </motion.div>
@@ -73,7 +73,7 @@ const Projects = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group"
                 >
-                  <div className={`h-full rounded-2xl p-8 hover:shadow-card transition-all duration-300 relative overflow-hidden border border-lavender/30 bg-gradient-to-br ${project.color}/10 via-white to-lavender-light/30`}>
+                  <div className="h-full rounded-2xl p-8 hover:shadow-card transition-all duration-300 relative overflow-hidden border border-border bg-white">
                     {/* Gradient background on hover */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                     
