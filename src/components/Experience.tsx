@@ -39,6 +39,18 @@ const experiences = [
     gradient: "from-lavender via-indigo-light to-indigo",
     bgGradient: "from-lavender/20 to-indigo/10",
   },
+  {
+    title: "UI/UX Intern",
+    company: "QualitApps Asia (Pvt) Ltd",
+    period: "June 2019 – Sept 2019",
+    description: [
+      "Mentored junior developers, providing code reviews, UX feedback, and technical guidance to elevate overall engineering quality",
+      "Learned front-end development fundamentals and design principles",
+      "Supported senior engineers in building UI components",
+    ],
+    gradient: "from-indigo via-lavender to-violet",
+    bgGradient: "from-indigo/20 to-lavender/10",
+  },
 ];
 
 const Experience = () => {
