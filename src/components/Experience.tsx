@@ -84,7 +84,7 @@ const Experience = () => {
           </motion.div>
 
           {/* Experience Cards - Horizontal Layout */}
-          <div className="grid lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp.title + exp.period}
