@@ -62,6 +62,45 @@ const Projects = () => {
             </p>
           </motion.div>
 
+          {/* Skills showcase */}
+          <motion.div
+            variants={fadeUpVariants}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-12 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
+          >
+            <h3 className="text-lg font-display font-semibold mb-4 text-primary-foreground">
+              Technical Expertise
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {[
+                "Bootstrap",
+                "Angular Material",
+                "Angular Bootstrap",
+                "HTML/CSS/SCSS",
+                "Responsive Web Development",
+                "Figma",
+                "Adobe XD",
+                "Photoshop CC",
+                "Illustrator CC",
+                "Cross-browser Testing",
+                "Mobile Responsiveness",
+                "WordPress Theme Development",
+                "Agile Development",
+                "Jira",
+                "Azure DevOps",
+                "AngularJS",
+                "Mobile App Design",
+              ].map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1.5 rounded-full text-xs font-medium bg-white/20 text-primary-foreground border border-white/30 hover:bg-white/30 transition-colors"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+
           {/* Projects grid */}
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => {
