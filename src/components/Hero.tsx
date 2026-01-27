@@ -66,7 +66,7 @@ const Hero = () => {
           duration: 0.6,
           delay: 0.3
         }} className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-            5+ years crafting scalable, high-performance web applications with elegant code and empathetic user experiences.
+            6+ years crafting scalable, high-performance web applications with elegant code and empathetic user experiences.
           </motion.p>
 
           {/* CTA Buttons */}
