@@ -60,7 +60,7 @@ const About = () => {
               </p>
               <div className="flex gap-8 pt-4">
                 <div>
-                  <h3 className="text-4xl font-display font-bold text-gradient">5+</h3>
+                  <h3 className="text-4xl font-display font-bold text-gradient">6+</h3>
                   <p className="text-muted-foreground">Years Experience</p>
                 </div>
                 <div>
