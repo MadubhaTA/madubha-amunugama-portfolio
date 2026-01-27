@@ -102,7 +102,7 @@ const Projects = () => {
           </motion.div>
 
           {/* Projects grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {projects.map((project, index) => {
               const Icon = project.icon;
               return (
@@ -112,25 +112,22 @@ const Projects = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group"
                 >
-                  <div className="h-full rounded-2xl p-8 hover:shadow-card transition-all duration-300 relative overflow-hidden border border-border bg-white">
+                  <div className="h-full rounded-2xl p-6 hover:shadow-card transition-all duration-300 relative overflow-hidden border border-border bg-white">
                     {/* Gradient background on hover */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                     
                     {/* Icon */}
-                    <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center mb-6 shadow-glow`}>
-                      <Icon className="w-7 h-7 text-primary-foreground" />
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center mb-4 shadow-glow`}>
+                      <Icon className="w-6 h-6 text-primary-foreground" />
                     </div>
 
-                    {/* Content */}
-                    <h3 className="text-xl font-display font-semibold mb-3 group-hover:text-gradient transition-all duration-300">
+                    {/* Title */}
+                    <h3 className="text-lg font-display font-semibold mb-4 group-hover:text-gradient transition-all duration-300">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
-                      {project.description}
-                    </p>
 
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag, tagIndex) => {
                         const tagColors = [
                           "bg-indigo/20 text-indigo-dark",
@@ -147,16 +144,6 @@ const Projects = () => {
                         );
                       })}
                     </div>
-
-                    {/* Link */}
-                    <motion.div
-                      className="flex items-center gap-2 text-primary font-medium text-sm cursor-pointer"
-                      whileHover={{ x: 5 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      View Details
-                      <ExternalLink className="w-4 h-4" />
-                    </motion.div>
                   </div>
                 </motion.div>
               );
