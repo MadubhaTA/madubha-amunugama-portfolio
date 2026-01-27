@@ -116,47 +116,64 @@ const Projects = () => {
           </motion.div>
 
           {/* Projects grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => {
               const Icon = project.icon;
               return (
                 <motion.div
                   key={project.title}
                   variants={scaleInVariants}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                  whileHover={{ y: -8, transition: { duration: 0.3 } }}
                   className="group"
                 >
-                  <div className="h-full rounded-2xl p-6 hover:shadow-card transition-all duration-300 relative overflow-hidden border border-border bg-white">
-                    {/* Gradient background on hover */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+                  <div className="h-full rounded-2xl p-6 transition-all duration-500 relative overflow-hidden bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 hover:shadow-2xl">
+                    {/* Animated gradient background */}
+                    <motion.div 
+                      className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+                      initial={{ scale: 0.8, opacity: 0 }}
+                      whileHover={{ scale: 1, opacity: 0.2 }}
+                    />
                     
-                    {/* Icon */}
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center mb-4 shadow-glow`}>
-                      <Icon className="w-6 h-6 text-primary-foreground" />
-                    </div>
+                    {/* Floating particles effect */}
+                    <div className="absolute top-4 right-4 w-20 h-20 bg-white/5 rounded-full blur-2xl group-hover:bg-white/10 transition-all duration-700" />
+                    
+                    <div className="relative z-10 flex items-start gap-5">
+                      {/* Animated Icon */}
+                      <motion.div 
+                        className={`w-14 h-14 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center shadow-lg flex-shrink-0`}
+                        whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <Icon className="w-7 h-7 text-white" />
+                      </motion.div>
 
-                    {/* Title */}
-                    <h3 className="text-lg font-display font-semibold mb-4 group-hover:text-gradient transition-all duration-300">
-                      {project.title}
-                    </h3>
+                      <div className="flex-1">
+                        {/* Title */}
+                        <motion.h3 
+                          className="text-xl font-display font-semibold mb-3 text-primary-foreground group-hover:text-white transition-colors duration-300"
+                        >
+                          {project.title}
+                        </motion.h3>
 
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag, tagIndex) => {
-                        const tagColors = [
-                          "bg-indigo/20 text-indigo-dark",
-                          "bg-violet/20 text-violet",
-                          "bg-lavender/30 text-indigo",
-                        ];
-                        return (
-                          <span
-                            key={tag}
-                            className={`px-3 py-1 rounded-full text-xs font-medium ${tagColors[tagIndex % tagColors.length]}`}
-                          >
-                            {tag}
-                          </span>
-                        );
-                      })}
+                        {/* Tags with stagger animation */}
+                        <div className="flex flex-wrap gap-2">
+                          {project.tags.map((tag, tagIndex) => (
+                            <motion.span
+                              key={tag}
+                              initial={{ opacity: 0, scale: 0.8 }}
+                              whileInView={{ opacity: 1, scale: 1 }}
+                              transition={{ duration: 0.3, delay: index * 0.08 + tagIndex * 0.1 }}
+                              className="px-3 py-1.5 rounded-full text-xs font-medium bg-white/20 text-white border border-white/30 hover:bg-white/30 hover:scale-105 transition-all duration-300 cursor-default"
+                            >
+                              {tag}
+                            </motion.span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
