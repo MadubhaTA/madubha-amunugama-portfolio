@@ -5,31 +5,45 @@ import { ExternalLink, Bot, CalendarDays, LayoutDashboard, Palette } from "lucid
 const projects = [
   {
     title: "AI Chatbot Platform",
-    description: "Led design and front-end architecture for chatbot management UI, including admin backoffice and analytics workflows.",
     tags: ["Vue.js", "Tailwind CSS", "TypeScript"],
     icon: Bot,
     color: "from-indigo to-violet",
   },
   {
     title: "Leave Management System",
-    description: "Designed and developed comprehensive leave approval interfaces for enterprise user bases with intuitive workflows.",
     tags: ["Angular", "SCSS", "Material UI"],
     icon: CalendarDays,
     color: "from-violet to-lavender",
   },
   {
-    title: "Enterprise Dashboard",
-    description: "Architected modular Angular front-end frameworks supporting multiple enterprise platforms with improved scalability.",
-    tags: ["Angular", "Bootstrap", "RxJS"],
+    title: "Hotel & Motel Management System",
+    tags: ["Bootstrap", "Angular"],
     icon: LayoutDashboard,
     color: "from-lavender to-indigo-light",
   },
   {
-    title: "Design System",
-    description: "Led team adoption of reusable design systems and coding standards, improving front-end consistency across products.",
-    tags: ["Figma", "Design Tokens", "Components"],
-    icon: Palette,
+    title: "AI Chat for Projects Estimation",
+    tags: ["Vue", "Tailwind CSS"],
+    icon: Bot,
     color: "from-indigo-light to-indigo",
+  },
+  {
+    title: "Dental Work Management System",
+    tags: ["Bootstrap", "Angular"],
+    icon: Palette,
+    color: "from-indigo to-violet",
+  },
+  {
+    title: "Institute Management System",
+    tags: ["Vue", "Tailwind CSS"],
+    icon: LayoutDashboard,
+    color: "from-violet to-lavender",
+  },
+  {
+    title: "Recruitment for Sports Sector",
+    tags: ["Vue", "Vuetify"],
+    icon: CalendarDays,
+    color: "from-lavender to-indigo-light",
   },
 ];
 
