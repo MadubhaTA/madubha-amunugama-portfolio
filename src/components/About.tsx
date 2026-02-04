@@ -1,21 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUpVariants, staggerContainer } from "./ui/motion";
 
-const skills = [
-  { name: "Tailwind CSS", category: "Styling" },
-  { name: "TypeScript", category: "Language" },
-  { name: "Vue.js", category: "Framework" },
-  { name: "Angular", category: "Framework" },
-  { name: "Figma", category: "Design" },
-  { name: "SCSS", category: "Styling" },
-  { name: "JavaScript", category: "Language" },
-  { name: "Bootstrap", category: "Styling" },
-  { name: "Adobe XD", category: "Design" },
-  { name: "Git", category: "Tools" },
-  { name: "Vuetify", category: "UI Library" },
-  { name: "Angular Material", category: "UI Library" },
-];
-
 const About = () => {
   return (
     <section id="about" className="py-24 md:py-32 relative bg-gradient-to-br from-violet/5 via-background to-lavender/10">
@@ -25,85 +10,67 @@ const About = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="max-w-6xl mx-auto"
+          className="max-w-4xl mx-auto"
         >
           {/* Section header */}
           <motion.div
             variants={fadeUpVariants}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
             <span className="inline-block px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-4">
               About Me
             </span>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              Passionate about creating
-              <span className="text-gradient"> beautiful experiences</span>
+              Professional
+              <span className="text-gradient"> Summary</span>
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left column - Description */}
-            <motion.div
-              variants={fadeUpVariants}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-6"
-            >
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Results-driven Senior Frontend Engineer with expertise in designing, 
-                architecting, and delivering scalable, high-performance web applications.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Specialized in modern UI/UX principles with a strong foundation in 
-                component-driven architecture and responsive design. I'm passionate about 
-                building maintainable systems that blend elegant code with empathetic user experiences.
-              </p>
-              <div className="flex gap-8 pt-4">
-                <div>
-                  <h3 className="text-4xl font-display font-bold text-gradient">6+</h3>
-                  <p className="text-muted-foreground">Years Experience</p>
-                </div>
-                <div>
-                  <h3 className="text-4xl font-display font-bold text-gradient">10+</h3>
-                  <p className="text-muted-foreground">Projects Delivered</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Right column - Skills */}
-            <motion.div
-              variants={fadeUpVariants}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <div className="bg-gradient-to-br from-indigo/20 via-lavender-light to-violet/20 rounded-2xl p-8 border border-lavender/40 shadow-card">
-                <h3 className="text-xl font-display font-semibold mb-6">
-                  Core Competencies
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {skills.map((skill, index) => {
-                    const colors = [
-                      "bg-indigo text-white",
-                      "bg-violet text-white",
-                      "bg-lavender text-foreground",
-                      "bg-primary text-white",
-                    ];
-                    return (
-                      <motion.span
-                        key={skill.name}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: index * 0.05 }}
-                        viewport={{ once: true }}
-                        className={`px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:scale-105 transition-transform cursor-default ${colors[index % colors.length]}`}
-                      >
-                        {skill.name}
-                      </motion.span>
-                    );
-                  })}
-                </div>
-              </div>
-            </motion.div>
-          </div>
+          {/* Content */}
+          <motion.div
+            variants={fadeUpVariants}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white rounded-2xl p-8 md:p-10 border border-lavender/30 shadow-card"
+          >
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Results-driven Senior Frontend Engineer with <strong className="text-foreground">6+ years of experience</strong> designing, 
+              architecting, and delivering scalable, high-performance web applications.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Specialized in <strong className="text-foreground">Tailwind CSS, Vuetify, Vue, SCSS, Bootstrap, TypeScript</strong>, and modern UI/UX principles, 
+              with a strong foundation in component-driven architecture and responsive design.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              Adept at solving complex technical challenges, mentoring peers, and driving frontend best practices 
+              in enterprise-grade environments. Passionate about building maintainable systems that blend 
+              elegant code with empathetic user experiences.
+            </p>
+            
+            <div className="flex flex-wrap gap-8 pt-4 border-t border-lavender/30">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="text-center"
+              >
+                <h3 className="text-4xl font-display font-bold text-gradient">6+</h3>
+                <p className="text-muted-foreground">Years Experience</p>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="text-center"
+              >
+                <h3 className="text-4xl font-display font-bold text-gradient">10+</h3>
+                <p className="text-muted-foreground">Projects Delivered</p>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="text-center"
+              >
+                <h3 className="text-4xl font-display font-bold text-gradient">4+</h3>
+                <p className="text-muted-foreground">Roles Progressed</p>
+              </motion.div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
