@@ -1,6 +1,6 @@
 import { motion, type Easing } from "framer-motion";
 import { fadeUpVariants, staggerContainer, scaleInVariants } from "./ui/motion";
-import { Hotel, MessageCircle, CalendarDays, Heart, GraduationCap, Trophy } from "lucide-react";
+import { Hotel, MessageCircle, CalendarDays, GraduationCap, Trophy, Stethoscope, Building, Activity } from "lucide-react";
 
 const projects = [
   {
@@ -9,23 +9,23 @@ const projects = [
     color: "from-indigo to-violet",
   },
   {
-    title: "Leave Management System",
+    title: "Leave Approval System",
     icon: CalendarDays,
     color: "from-violet to-lavender",
   },
   {
-    title: "Hotel & Motel Management System",
-    icon: Hotel,
+    title: "Projects, Users & Organizations Management",
+    icon: Building,
     color: "from-lavender to-indigo-light",
   },
   {
-    title: "AI Chat for Projects Estimation",
-    icon: MessageCircle,
+    title: "Recruitment Management for Sports Sector",
+    icon: Trophy,
     color: "from-indigo-light to-indigo",
   },
   {
     title: "Dental Work Management System",
-    icon: Heart,
+    icon: Stethoscope,
     color: "from-indigo to-violet",
   },
   {
@@ -34,9 +34,14 @@ const projects = [
     color: "from-violet to-lavender",
   },
   {
-    title: "Recruitment for Sports Sector",
-    icon: Trophy,
+    title: "Dynamic Health Report Generator",
+    icon: Activity,
     color: "from-lavender to-indigo-light",
+  },
+  {
+    title: "Hotel & Motel Management System",
+    icon: Hotel,
+    color: "from-indigo-light to-indigo",
   },
 ];
 
@@ -101,48 +106,6 @@ const Projects = () => {
             </p>
           </motion.div>
 
-          {/* Skills showcase */}
-          <motion.div
-            variants={fadeUpVariants}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-12 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-          >
-            <h3 className="text-lg font-display font-semibold mb-4 text-primary-foreground">
-              Technical Expertise
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {[
-                "Bootstrap",
-                "Angular Material",
-                "Angular Bootstrap",
-                "HTML/CSS/SCSS",
-                "Responsive Web Development",
-                "Figma",
-                "Adobe XD",
-                "Photoshop CC",
-                "Illustrator CC",
-                "Cross-browser Testing",
-                "Mobile Responsiveness",
-                "WordPress Theme Development",
-                "Agile Development",
-                "Jira",
-                "Azure DevOps",
-                "AngularJS",
-                "Mobile App Design",
-              ].map((skill, index) => (
-                <motion.span
-                  key={skill}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.03 }}
-                  whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.3)" }}
-                  className="px-3 py-1.5 rounded-full text-xs font-medium bg-white/20 text-primary-foreground border border-white/30 transition-colors cursor-default"
-                >
-                  {skill}
-                </motion.span>
-              ))}
-            </div>
-          </motion.div>
 
           {/* Projects grid */}
           <div className="grid md:grid-cols-2 gap-6">
