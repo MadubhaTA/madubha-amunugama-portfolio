@@ -20,7 +20,7 @@ const contactInfo = [
     icon: Linkedin,
     label: "LinkedIn",
     value: "Connect on LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/madubha-amunugama-398594174",
   },
   {
     icon: MapPin,
