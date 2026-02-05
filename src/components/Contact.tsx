@@ -112,12 +112,12 @@ const Contact = () => {
               <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
                 Whether you need a complete frontend solution or UI/UX expertise, I'm here to help bring your vision to life.
               </p>
-              <Button size="lg" variant="hero" asChild>
-                <a href="mailto:madubhaamunugama@gmail.com">
+              <a href="mailto:madubhaamunugama@gmail.com">
+                <Button size="lg" variant="hero">
                   <Mail className="w-5 h-5 mr-2" />
                   Send Me an Email
-                </a>
-              </Button>
+                </Button>
+              </a>
             </div>
           </motion.div>
         </motion.div>
