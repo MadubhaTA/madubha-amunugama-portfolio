@@ -14,9 +14,6 @@ const Footer = () => {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Madubha Amunugama. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Crafted with <Heart className="w-4 h-4 text-primary fill-primary" /> and precision
-          </p>
         </motion.div>
       </div>
     </footer>

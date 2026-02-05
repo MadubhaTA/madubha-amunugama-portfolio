@@ -50,7 +50,7 @@ const Hero = () => {
           delay: 0.1
         }} className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 leading-tight">
             <span className="block">Hi, I'm</span>
-            <span className="text-gradient">Madubha</span>
+            <span className="text-gradient"> A.W Madubha Amunugama</span>
           </motion.h1>
 
           {/* Role */}
