@@ -64,6 +64,11 @@ const experiences = [
 const Experience = () => {
   return (
     <section id="experience" className="py-24 md:py-32 bg-gradient-to-br from-indigo/10 via-violet/5 to-lavender/15 relative overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 opacity-[0.15] bg-cover bg-center bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: "url('/images/experience-bg.png')" }}
+      />
       {/* Animated background elements */}
       <motion.div 
         className="absolute top-20 left-10 w-72 h-72 bg-indigo/10 rounded-full blur-3xl"
