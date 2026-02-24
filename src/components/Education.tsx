@@ -38,7 +38,12 @@ const education = [
 
 const Education = () => {
   return (
-    <section id="education" className="py-24 md:py-32 bg-gradient-to-br from-lavender/10 via-background to-indigo/5">
+    <section id="education" className="py-24 md:py-32 bg-gradient-to-br from-lavender/10 via-background to-indigo/5 relative overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 opacity-[0.12] bg-cover bg-center bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: "url('/images/education-bg.png')" }}
+      />
       <div className="container mx-auto px-6">
         <motion.div
           variants={staggerContainer}
